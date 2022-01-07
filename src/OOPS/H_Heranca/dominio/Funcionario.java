@@ -3,9 +3,22 @@ package OOPS.H_Heranca.dominio;
 public class Funcionario extends Pessoa{
     private double salario;
 
+    static {
+        System.out.println("dentro do bloco estatico de Funcionario");
+    }
+
+    {
+        System.out.println("bloco de inicialização Funcionario 1");
+    }
+
+    {
+        System.out.println("bloco de inicialização Funcionario 2");
+    }
+
     public Funcionario(String nome, double salario) {
         super(nome);
         this.salario = salario;
+        System.out.println("dentro do construtor funcionario");
     }
 
     @Override
